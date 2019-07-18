@@ -16,12 +16,16 @@ class App extends React.Component {
 
   render() {
     //
-    const channelSelection = this.state.channels.map((item) =>  <option key={item.id}>{item.value}</option>)
+        
+   
+  
+
+    // const channelSelection = this.state.channels.map((item) =>  <option key={item.id}>{item.value}</option>)
     return (
       <>
      
         <ChannelsDropdown/>
-      
+       
       </>
     );
   }

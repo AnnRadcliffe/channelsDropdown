@@ -29,8 +29,8 @@ const ChannelsData = [
     },
     {
       id: '5',
-      text: 'Refferal',
-      value: 'Refferal',
+      text: 'Referral',
+      value: 'Referral',
       selected: false,
       key: 'channel'
     },

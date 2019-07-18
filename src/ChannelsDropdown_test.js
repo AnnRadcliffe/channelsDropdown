@@ -9,33 +9,20 @@ class ChannelsDropdown extends React.Component {
     super(props)
     this.state = {
       channels: ChannelsData,
-      isHidden: true,
       otherField: ''
     }
 }
-// toggleHidden () {
-//   this.setState({
-//     isHidden: !this.state.isHidden
-//   })
-// }
 
-handleChange = (event) => {
-  this.setState({
-    otherField: event.target.value,
-    isHidden: false
-  }, () => console.log(this.state.otherField));
+handleChange(event) {
+  this.setState({otherField: event.target.value});
    //  //define a variable for the textarea
-  //  let otherField;
+   let otherField;
     
-  //  //define the condition in which the element will appear on the DOM
-  //  if(this.state.otherField === 'Other' ) {
-  //   // otherField = <p>{this.state.otherField}</p>
-  //    console.log('condition met');
-  //  }
-}
-
-showTextbox = () => {
-  let otherText = 
+   //define the condition in which the element will appear on the DOM
+   if(this.state.value === 'Other' ) {
+    otherField = <p>{this.state.value}</p>
+     console.log('condition met');
+   }
 }
 
   render() {
@@ -50,8 +37,12 @@ showTextbox = () => {
           {channelSelection}
         </select>
         <div>
-          {!this.state.isHidden && <input type='text'/> }
+          <input
+          type='text'
+          onChange={this.myChangeHandler}
+          />
         </div>
+        {otherField}
 
       </>
       
