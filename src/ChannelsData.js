@@ -1,5 +1,12 @@
 const ChannelsData = [
     {
+    id: '0',
+    text: 'Please Choose One',
+    value: 'Please Choose One',
+    selected: false,
+    key: 'channel'
+    },
+    {
       id: '1',
       text: 'Sherwin Williams',
       value: 'Sherwin Williams',
@@ -43,5 +50,4 @@ const ChannelsData = [
     }
   ]
   
-
 export default ChannelsData;
