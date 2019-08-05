@@ -7,7 +7,6 @@ class ChannelsDropdown extends React.Component {
     super(props)
     this.state = {
       channels: ChannelsData,
-      placeHolder:'Please Choose One',
       isHidden: true,
       otherField: ''
     }
@@ -25,7 +24,6 @@ showTextbox() {
     this.setState({
       isHidden: false
     });
-    console.log(this.state.otherField);
     } else {
       this.setState({
         isHidden: true
@@ -35,12 +33,12 @@ showTextbox() {
 
   render() {
 
-    const channelSelection = this.state.channels.map((item) =>  <option key={item.id}> {item.value} </option>)
+    const channelSelection = this.state.channels.map((item) =>  <option key={item.id}> {item.text} </option>)
 
     return (
       <>
         <h5>How did you hear about us?</h5>
-        <select defaultValue='Please Choose One' value={this.state.value} onChange={this.handleChange}> 
+        <select required value={this.state.value} onChange={this.handleChange}> 
           {channelSelection} 
         </select>
         <div>

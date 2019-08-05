@@ -1,10 +1,10 @@
 const ChannelsData = [
     {
-    id: '0',
-    text: 'Please Choose One',
-    value: 'Please Choose One',
-    selected: false,
-    key: 'channel'
+      id: '0',
+      text: 'Please Choose One',
+      value: '',
+      selected: false,
+      key: 'channel'
     },
     {
       id: '1',
